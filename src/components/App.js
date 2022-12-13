@@ -8,6 +8,7 @@ import Header from "./Header";
 import CharacterList from "./CharacterList";
 import Filter from "./Filters";
 import CardDetail from "./CardDetail";
+import NotFoundPage from "./NotFoundPage";
 // import Footer from './Footer';
 
 function App() {
@@ -68,6 +69,8 @@ function App() {
             path="/character/:characterId"
             element={<CardDetail character={cardFound}/>}
           ></Route>
+
+          <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </main>
     </>

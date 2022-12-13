@@ -8,7 +8,7 @@ function CardDetail(props) {
         <>
             <Link to="/"> Ir a inicio </Link>
             <li className="card">
-            <a className="card_link" href={props.character.id} title="character Detail">
+            <div className="card_link" title="character Detail">
                 <div className="card_img">
                 <img
                     className="card_img-cont"
@@ -25,7 +25,7 @@ function CardDetail(props) {
                 <p className="card_species">Origin: {props.character.origin}</p>
 
 
-            </a>
+            </div>
             </li>
         </>
     )
