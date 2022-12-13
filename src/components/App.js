@@ -59,7 +59,8 @@ function App() {
                 {filterCharacter.length > 0 ? (
                   <CharacterList character={filterCharacter} />
                 ) : (
-                  <h2 className="notFound">Character not found</h2>
+                  
+                  <h2 className="notFound">No hay ningún personaje que coincida con la palabra {findCharacter}</h2>
                 )}
               </>
             }
