@@ -5,7 +5,7 @@ import '../styles/layout/NotFound.scss'
 function NotFoundPage(){
     return(
         <>
-            <Link to="/" className="goHomePage"> Ir a inicio </Link>
+            <Link to="/" className="goHomePage"> Ir al inicio </Link>
             <h2 className="notFound">Page Not Found</h2>
         </>
     )

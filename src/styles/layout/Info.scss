@@ -1,16 +1,19 @@
-.card{
+.info{
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
     border-radius: 25px;
     overflow: hidden;
     box-shadow: 0px 0px 25px 3px rgba(39,194,124,1);
+    width: 70%;
 
     &_link{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgba(28, 230, 196,0.8);
+        background-color: #1ce6c4;
     }
 
     &_info{
@@ -19,7 +22,7 @@
     }
 
     &_img{
-        background-color: rgba(28, 230, 196,0);
+        background-color: #1ce6c4;
         margin-top: 10px;
         &-cont{
             border-radius: 50px
@@ -28,18 +31,23 @@
     &_name{
         font-size: 26px;
         padding: 10px;
-        background-color: rgba(28, 230, 196,0.0);
+        background-color: #1ce6c4;
         color: black;
         font-family: 'Hanalei Fill', cursive;
     };
     &_species{
         font-size: 20px;
         margin-bottom: 15px;
-        background-color: rgba(28, 230, 196,0.0);
+        background-color: #1ce6c4;
         color: black;
         font-weight: 700;
         font-family: 'Amatic SC', cursive;
-
     };
-};
 
+    @media all and (min-width: 768px){
+        width: 50%;
+    }
+    @media all and (min-width: 1200px){
+        width: 30%;
+    }
+};

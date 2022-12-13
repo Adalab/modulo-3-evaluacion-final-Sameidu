@@ -1,6 +1,6 @@
 
 import NameFilter from "./NameFilter";
-
+import "../styles/layout/Form.scss"
 
 function Filter(props) {
     
@@ -9,7 +9,7 @@ function Filter(props) {
     };
 
     return(
-        <form className='header_form' onSubmit={handleSubmit}>
+        <form className='form' onSubmit={handleSubmit}>
         <NameFilter
             findCharacter={props.findCharacter}
             handleFilterName={props.handleFilterName}

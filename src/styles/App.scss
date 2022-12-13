@@ -1,7 +1,11 @@
 @import 'core/reset';
 
-
-
+.main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /*
   Aquí puedes poner tu código Sass
 */

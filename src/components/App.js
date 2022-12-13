@@ -46,7 +46,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <main>
+      <main className="main">
         <Routes>
           <Route
             path="/"
@@ -60,7 +60,7 @@ function App() {
                   <CharacterList character={filterCharacter} />
                 ) : (
                   
-                  <h2 className="notFound">No hay ningún personaje que coincida con la palabra {findCharacter}</h2>
+                  <h2 className="notFound">No hay ningún personaje que coincida con {findCharacter}</h2>
                 )}
               </>
             }
