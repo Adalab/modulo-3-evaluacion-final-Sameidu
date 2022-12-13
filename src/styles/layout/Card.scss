@@ -1,0 +1,29 @@
+.card{
+
+    &_link{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgb(62, 182, 152);
+    }
+
+    &_img{
+        
+        &-cont{
+            object-fit: cover;
+            
+        }
+    };
+    &_name{
+        font-size: 20px;
+        padding: 10px;
+        background-color: rgb(62, 182, 152);
+    };
+    &_species{
+        font-size: 15px;
+        margin-bottom: 15px;
+        background-color: rgb(62, 182, 152);
+    };
+};
