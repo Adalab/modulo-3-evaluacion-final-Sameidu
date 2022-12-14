@@ -25,7 +25,7 @@ function App() {
       setCharacter(response);
     });
   }
-  }, []);
+  }, [character, findCharacter, findSpecies]);
 
   useEffect(() => {
     ls.set('character', character);
