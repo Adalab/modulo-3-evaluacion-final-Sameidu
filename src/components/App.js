@@ -14,6 +14,7 @@ import NotFoundPage from "./NotFoundPage";
 function App() {
   const [character, setCharacter] = useState([]);
   const [findCharacter, setFindCharacter] = useState("");
+  const [findSpecies, setFindSpecies] = useState("");
 
 
   useEffect(() => {
@@ -23,17 +24,26 @@ function App() {
   }, []);
 
   const handleFilterName = (data) => {
-    if (data.key === "name") {
-      setFindCharacter(data.value);
-    }
+    setFindCharacter(data);
   };
 
+  const handleSpecies = (data) => {
+      setFindSpecies(data);
+  };
+
+  const handleReset = () => {
+    setFindCharacter("");
+    setFindSpecies("")
+  }
 
   const filterCharacter = character
   .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
   .filter((character) => {
     return character.name.toLowerCase().includes(findCharacter.toLowerCase());
-  });
+  })
+  .filter((character) => {
+    return character.species.toLowerCase().includes(findSpecies.toLowerCase())
+  })
 
 
   const { pathname } = useLocation();
@@ -55,6 +65,9 @@ function App() {
                 <Filter
                   findCharacter={findCharacter}
                   handleFilterName={handleFilterName}
+                  findSpecies={findSpecies}
+                  handleSpecies={handleSpecies}
+                  handleReset={handleReset}
                 />
                 {filterCharacter.length > 0 ? (
                   <CharacterList character={filterCharacter} />

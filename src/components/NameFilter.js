@@ -1,19 +1,14 @@
 function NameFilter(props) {
 
     const nameFunction = (ev) => {
-        props.handleFilterName({
-            key: 'name',
-            value: ev.target.value,
-          });
+        props.handleFilterName(ev.target.value)
     }
-
-
 
     return(
     <>
-        <label htmlFor="">Nombre del personaje</label>
+        <label htmlFor="" >Name: </label>
         <input
-          className='form_input-text'
+          className='form_input'
           onChange={nameFunction}
           type='text'
           name='name'

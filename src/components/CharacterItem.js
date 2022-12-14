@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function CharacterItem(props) {
     return (
-        <li key={props.character.id} className="card">
+        <li className="card">
           <Link to={`/character/${props.character.id}`}>
           <div className="card_link" title="character Detail">
             <div className="card_img">
