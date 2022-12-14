@@ -9,6 +9,7 @@ import CharacterList from "./CharacterList";
 import Filter from "./Filters";
 import CardDetail from "./CardDetail";
 import NotFoundPage from "./NotFoundPage";
+import NotFoundCharacter from "./NotFoundCharacter";
 // import Footer from './Footer';
 
 function App() {
@@ -72,8 +73,7 @@ function App() {
                 {filterCharacter.length > 0 ? (
                   <CharacterList character={filterCharacter} />
                 ) : (
-                  
-                  <h2 className="notFound">No hay ningún personaje que coincida con {findCharacter}</h2>
+                  <NotFoundCharacter findCharacter={findCharacter} handleReset={handleReset}/>
                 )}
               </>
             }

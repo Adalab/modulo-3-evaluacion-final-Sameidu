@@ -1,20 +1,21 @@
 .form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    transform: translateY(-25%);
+    transform: translateY(-10%);
     box-shadow: 0px 0px 25px 3px rgba(39,194,124,1);
     border-radius: 15px;
-    padding: 25px;
+    padding-top: 15px;
     font-family: 'Amatic SC', cursive;
     font-size: 28px;
-
     &_input{
         margin: 10px;
         background-color: rgba(28, 230, 196,0.8);
         box-shadow: 0px 0px 25px 3px rgba(39,194,124,1);
         color: black;
+        border-style: none;
+        border-radius: 5px;
     }
     &_checkbox{
         margin: 0px 10px;
@@ -26,5 +27,12 @@
         box-shadow: 0px 0px 25px 3px rgba(39,194,124,1);
         border-style: none;
         padding: 7px 17px;
+    }
+
+    @media all and (min-width: 768px){
+        flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
+    transform: translateY(-25%);
     }
 }

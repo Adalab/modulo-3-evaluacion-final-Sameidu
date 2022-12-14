@@ -6,6 +6,7 @@ function NotFoundPage(){
     return(
         <>
             <Link to="/" className="goHomePage"> Ir al inicio </Link>
+            <h2 className="notFound">Wubba Lubba Dub Dub!!</h2>
             <h2 className="notFound">Page Not Found</h2>
         </>
     )
