@@ -60,7 +60,7 @@ function App() {
 
     const characterUrl = matchPath('/character/:characterId', pathname);
     const characterId = characterUrl !== null ? characterUrl.params.characterId : null;
-    const cardFound = character.find((char) => char.id === parseInt(characterId))
+    const cardFound = character.find((char) => char.id === parseInt(characterId));
 
 
   return (
