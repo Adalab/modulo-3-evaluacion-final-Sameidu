@@ -10,19 +10,28 @@ import Filter from "./Filters";
 import CardDetail from "./CardDetail";
 import NotFoundPage from "./NotFoundPage";
 import NotFoundCharacter from "./NotFoundCharacter";
+import ls from "../services/LocalStorage";
 // import Footer from './Footer';
 
 function App() {
-  const [character, setCharacter] = useState([]);
-  const [findCharacter, setFindCharacter] = useState("");
-  const [findSpecies, setFindSpecies] = useState("");
+  const [character, setCharacter] = useState(ls.get('character', []));
+  const [findCharacter, setFindCharacter] = useState(ls.get('findCharacter',''));
+  const [findSpecies, setFindSpecies] = useState(ls.get('findSpecies',''));
 
 
   useEffect(() => {
+    if (character.length === 0) {
     callToApi().then((response) => {
       setCharacter(response);
     });
+  }
   }, []);
+
+  useEffect(() => {
+    ls.set('character', character);
+    ls.set('findCharacter', findCharacter);
+    ls.set('findSpecies', findSpecies);
+  }, [character, findCharacter, findSpecies]);
 
   const handleFilterName = (data) => {
     setFindCharacter(data);
